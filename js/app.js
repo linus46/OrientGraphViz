@@ -119,13 +119,7 @@ app.controller('GraphController', ['$scope', function($scope){
                     data : [{
                         "@rid": "#12:6779",
                         "@class": "Sunil",
-                        "name":"Sunil G",
-                        "date": "2012-03-21 00:00:00",
-                        "price": 6247.29,
-                        "certified": true,
-                        "bookValue": 4677.29,
-                        "inE" : ["in_sunil","in_snehil","in_anand"],
-                        "outE" : ["out_cricket","out_TableTennis"]
+                        "name":"Sunil G"
                       }],
                       "classes" : {
                       "Sunil": {
