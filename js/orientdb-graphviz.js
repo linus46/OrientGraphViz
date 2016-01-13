@@ -478,6 +478,17 @@ var OrientGraph = (function () {
                     var stroke = self.getClazzConfigVal(d, "stroke");
                     return stroke ? stroke : null;
                 })
+                .on("click",function(d){
+                        if (d != undefined && d === 'all') {
+                            d3.selectAll('.vertex').style("opacity",function(d){ return 1});
+                        }
+                        else
+                        {
+                            d3.selectAll('.vertex').style("opacity",function(d){ return 0.4});
+                            d3.selectAll('.vertex-'+d.toLowerCase()).style("opacity",function(d){ return 1});
+                        }
+                        console.log(d);
+                })
             var txt = this.clsLegend.append("text")
                 .attr("dy", 5)
                 .text(function (d) {
@@ -1580,6 +1591,9 @@ var OrientGraph = (function () {
         data: function (data) {
 
             var self = this;
+            if (self.classesInCanvas.indexOf('all') == -1) {
+                self.classesInCanvas.push('all');
+            }
             self.lastDataSize = data.length;
             data.forEach(function (elem) {
 
