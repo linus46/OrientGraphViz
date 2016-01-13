@@ -15,7 +15,7 @@ app.controller('GraphController', ['$scope', function($scope){
                         },
                         getOutLabelsForVertex : function(vertex){
                             return [
-                                "sunil",
+                                "movie",
                                 "linus"
                             ]
                         },
@@ -78,18 +78,19 @@ app.controller('GraphController', ['$scope', function($scope){
                         }
                         var dataJson = [];
 
-                        if (label == "'sunil'") {
+                        if (label == "'movie'") {
                           dataJson = [
                                   {
                                     "@rid": "#22:5080",
-                                    "@class": "User",
+                                    "@class": "movie",
                                     "in": "#13:6010",
                                     "out": "#12:6779"
                                   },
                                   {
                                     "@rid": "#13:6010",
-                                    "@class": "User",
-                                    "name": "sunil",
+                                    "@class": "movie",
+                                    "name": "DDLJ",
+                                    "icon":"https://github.com/favicon.ico"
                                   }
                                 ]
 
@@ -106,13 +107,13 @@ app.controller('GraphController', ['$scope', function($scope){
                                   {
                                     "@rid": "#13:6011",
                                     "@class": "User",
-                                    "name": "linus"
+                                    "name": "linus",
+                                    "icon":"https://github.com/favicon.ico"
                                   }
                                 ]
                         }
 
                         return dataJson;
-                        console.log('out edge clicked');
 
                     }
                     },
@@ -134,17 +135,11 @@ app.controller('GraphController', ['$scope', function($scope){
                         "icon": null,
                         "display": "name"
                       },
-                      "Make": {
-                        "fill": "#2789d6",
-                        "stroke": "#151c76",
-                        "icon": "",
-                        "display": "@rid"
-                      },
-                      "Automobile": {
+                      "movie": {
                         "fill": "#ff9896",
                         "stroke": "#b26a69",
                         "icon": null,
-                        "display": "@rid"
+                        "display": "name"
                       }
                     }
                   } ;
