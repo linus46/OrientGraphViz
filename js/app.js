@@ -7,7 +7,17 @@ var app = angular.module('GraphApp',['orientGraphViz']);
         });
 });**/
 app.controller('GraphController', ['$scope', function($scope){
-    
+    $scope.redraw = function(){
+      var data =  [{
+                        "@rid": "#12:6779",
+                        "@class": "Sunil",
+                        "name":"Sunil G",
+                        "icon":"https://github.com/favicon.ico"
+                      }];
+        $scope.$broadcast('redrawGraph',data);
+    }
+    $scope.showIcon = true ;
+    var data = [];
     $scope.config ={
                     menuFunctions : {
                         onViewClick : function(vertex){
@@ -117,11 +127,7 @@ app.controller('GraphController', ['$scope', function($scope){
 
                     }
                     },
-                    data : [{
-                        "@rid": "#12:6779",
-                        "@class": "Sunil",
-                        "name":"Sunil G"
-                      }],
+                    data :data,
                       "classes" : {
                       "Sunil": {
                         "fill": "#307a23",

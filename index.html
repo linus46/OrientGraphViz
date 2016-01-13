@@ -25,10 +25,14 @@
     <h1>Sunil G</h1>
     <div class="panel panel-default panel-orient panel-graph " ng-class="additionalClass">
         <div class="panel-heading">
-            Ref : <a href="https://github.com/orientechnologies/orientdb-studio" target="_blank">Orient Studio </a>
+            Source : <a href="https://github.com/orientechnologies/orientdb-studio" target="_blank">Orient Studio </a>
         </div>
-            <div class="row">
-                <div class="col-sm-12" style="height:600px" ng-controller="GraphController">
+            <div class="row" ng-controller="GraphController">
+                <div style="padding-left : 100px">
+                    <button class="btn btn-default" ng-click="redraw()">redraw</button>
+                </div
+                
+                <div class="col-sm-12" style="height:600px" >
                     <div class="" ng-o-graph="graphData">
 
                     </div>
@@ -38,11 +42,10 @@
 </div>
 </body>
 <script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="js/d3.min.js"></script>
-<script src="js/orientdb-graphviz.js"></script>
+<script src="js/widgets/orientdb-graphviz.js"></script>
 <script type="text/javascript" src="js/orientGraphViz.min.js"></script>
 <script src="js/app.js"></script>
 </body>
